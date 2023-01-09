@@ -1,3 +1,15 @@
-import {camelCase} from 'lodash';
+import _ from 'lodash';
+import myName from './myName';
 
-console.log(camelCase('hello world'));
+function component() {
+    const element = document.createElement('div');
+
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.textContent = myName('Cody');
+    return element;
+
+    
+}
+
+document.body.appendChild(component());
+
